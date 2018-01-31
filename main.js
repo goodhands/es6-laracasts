@@ -165,7 +165,7 @@ console.log(spreadSum(...num));
 
 	//alert(getPerson().greet());
 
-	/*	OBJECT DECONSTRUCTION	*/
+	/*	OBJECT DESTRUCTURING	*/
 
 	let person = {
 
@@ -179,7 +179,7 @@ console.log(spreadSum(...num));
 
 	//alert(name);
 
-	//More example on object deconstruction in ES6
+	//More example on object DESTRUCTURING in ES6
 
 		function getData({results, count}){
 
