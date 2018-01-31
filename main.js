@@ -67,11 +67,15 @@ function sum(answer = "Answer ", ...numbers){
 			will take everything to the right hand side of the arguments
 	*/
 
-		return numbers.reduce( function(prev, current){
+		// return numbers.reduce( function(prev, current){
 
-			return answer + (prev + current);
+		// 	return answer + (prev + current);
 		
-		} );
+		// } );
+
+	//Refactor the return statement using the arrow function
+
+	return numbers.reduce( (prev, current) => answer + (prev + current) );
 	
 }
 
