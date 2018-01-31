@@ -129,3 +129,98 @@ console.log(spreadSum(...num));
 		</div>`;
 
 	console.log(template);
+
+/*	7 - OBJECT ENHANCEMENTS - NEW FEATURE IN ES6 */
+
+	function getPerson(){
+
+		let name = "Samuel";
+		let age = "23";
+
+		//old fashioned way
+		// return {
+		// 	name : name,
+		// 	age : age
+		// }
+
+		//with es6
+		return {
+			name,
+
+			age,
+
+			//old fashioned way of declaring function as object
+			// greet: function(){
+			// 	return "Hello "+name+ ". I am "+age+" years old.";
+			// }
+
+			//new es6 method of function declaration
+			greet(){
+
+				return `Hello ${this.name}. I am ${this.age} years old.`;
+
+			}
+		}
+	}
+
+	//alert(getPerson().greet());
+
+	/*	OBJECT DECONSTRUCTION	*/
+
+	let person = {
+
+		name : 'Samuel',
+
+		age : '23' 
+	};
+
+	let {name, age} = person;
+
+
+	//alert(name);
+
+	//More example on object deconstruction in ES6
+
+		function getData({results, count}){
+
+			console.log(results, count);
+
+		}
+
+		getData({
+
+			name: 'Samuel',
+
+			age: 23,
+
+			results: ['foo', 'bar'],
+
+			count: 30
+		
+		});
+
+
+	/*	INSTEAD OF THIS (ES5)	*/	
+
+		function getData(data){
+
+			var results = data.results;
+
+			var count = data.count;
+
+			console.log(results, count);
+
+		}
+
+		getData({
+
+			name: 'Samuel',
+
+			age: 23,
+
+			results: ['foo', 'bar'],
+
+			count: 30
+		
+		});
+
