@@ -101,3 +101,31 @@ let num = [1 , 2];
 
 console.log(spreadSum(...num));
 
+
+/*	6 -	TEMPLATE STRINGS - USE THE BACK TICKS!!! */
+
+// Old fashioned way of building html in JS:
+	let template = [
+		'<div class="alert">',
+
+			'<p>Hello World</p>',
+
+		'</div>'
+	].join('');
+
+	console.log(template);
+
+//new es6 features: back tick (`) allows you to use 
+//dynamic values within your markup without the hassle of concatenation
+//and dealing with white spaces
+
+	let foo = "Foo";
+
+	let newTemplate = 
+		`<div class="alert">,
+
+			<p>${foo}</p>,
+
+		</div>`;
+
+	console.log(template);
