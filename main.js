@@ -233,6 +233,14 @@ console.log(spreadSum(...num));
 				this.email = email;
 			}
 
+			//a better way using 'Static' method and the 'rest' operator (see 4 above for more on rest operator)
+
+			static register(...args){
+
+					return new User(...args);
+			
+			}
+
 			changeEmail(newEmail){
 
 				this.email = newEmail;
@@ -242,8 +250,8 @@ console.log(spreadSum(...num));
 		}
 
 		//test
-		let user = new User('Samuel', 'olaegbesamuel@gmail.com');
+		let user = User.register('Samuel', 'olaegbesamuel@gmail.com');
 
-		user.changeEmail('olaegbe_samuel@yahoo.com');
+		//user.changeEmail('olaegbe_samuel@yahoo.com');
 
-		console.dir(user);
+		console.dir(user); 
