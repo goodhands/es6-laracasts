@@ -225,12 +225,22 @@ console.log(spreadSum(...num));
 		});
 
 
-	/*	CLASSES IN ES6	*/
+	/*	CLASSES IN ES6	(classes are first class citizens and can be passed around anywhere) */
 		class User{
 
 			constructor(username, email){
+
 				this.username = username;
 				this.email = email;
+			
+			}
+
+
+			//setters (set()) and getters (get()) || the values of these methods can be accessed by `user.hello` [classInstance].setter
+			get hello(){
+
+				return 'hello';
+
 			}
 
 			//a better way using 'Static' method and the 'rest' operator (see 4 above for more on rest operator)
@@ -249,9 +259,23 @@ console.log(spreadSum(...num));
 
 		}
 
+
+		/* CLASSES: EXAMPLE 2 - ANONYMOUS CLASSES */
+		function log(how){
+			return how.handle();
+		}
+
+		log(new class{	//an anonymous class. similar to one in php
+			handle(){
+				console.log('Console logging is the best!!!');
+			}
+		});
+		/*	END EXAMPLE 2 */
+
+
 		//test
 		let user = User.register('Samuel', 'olaegbesamuel@gmail.com');
 
 		//user.changeEmail('olaegbe_samuel@yahoo.com');
 
-		console.dir(user); 
+		console.log(user.hello); 
