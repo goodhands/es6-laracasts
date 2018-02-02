@@ -224,3 +224,26 @@ console.log(spreadSum(...num));
 		
 		});
 
+
+	/*	CLASSES IN ES6	*/
+		class User{
+
+			constructor(username, email){
+				this.username = username;
+				this.email = email;
+			}
+
+			changeEmail(newEmail){
+
+				this.email = newEmail;
+
+			}
+
+		}
+
+		//test
+		let user = new User('Samuel', 'olaegbesamuel@gmail.com');
+
+		user.changeEmail('olaegbe_samuel@yahoo.com');
+
+		console.dir(user);
